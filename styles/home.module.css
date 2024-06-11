@@ -1,0 +1,52 @@
+.section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/images/main.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.textLine {
+  display: flex;
+  justify-content: center;
+}
+
+.movingTextLeft {
+  font-size: 10vw;
+  animation: moveTextLeft 5s linear infinite;
+}
+
+.movingTextRight {
+  font-size: 10vw;
+  animation: moveTextRight 5s linear infinite;
+}
+
+@keyframes moveTextLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveTextRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
